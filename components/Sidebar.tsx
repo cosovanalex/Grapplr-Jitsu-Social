@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 // import { GoogleLogin, googleLogout  } from '@react-oauth/google';
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai';
-// import { GiKimono } from 'react-icons/gi';
 import { ImCancelCircle } from 'react-icons/im';
 
 import SuggestedAccounts from './SuggestedAccounts';
