@@ -3,6 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  crossOriginEmbedderPolicy: false,
   reactStrictMode: true,
   images: {
     domains: [

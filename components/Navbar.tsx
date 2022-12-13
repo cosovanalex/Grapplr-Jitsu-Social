@@ -9,7 +9,7 @@ import { GoogleLogin, googleLogout  } from '@react-oauth/google';
 
 import useAuthStore from '../store/authStore';
 import { IUser } from '../types';
-// import { createOrGetUser } from '../utils';
+import { createOrGetUser } from '../utils';
 import Logo from '../utils/grapplr logo.png';
 
 const Navbar = () => {
@@ -92,19 +92,15 @@ const Navbar = () => {
                   removeUser();
                 }}
               >
-                <AiOutlineLogout color='blue' fontSize={21} />
+                <AiOutlineLogout color='red' fontSize={21} />
               </button>
           </div>
         ) : (
             <GoogleLogin
-              onSuccess={credentialResponse => {
-                console.log(credentialResponse);
-              }}
-              onError={() => {
-                console.log('Login Failed');
-              }}
-              useOneTap/>
-              )}
+              onSuccess={(response) => createOrGetUser(response, addUser)}
+              onError={() => console.log('Login Failed')}
+            />
+        )}
       </div>
     </div>
   );

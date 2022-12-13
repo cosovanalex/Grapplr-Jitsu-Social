@@ -15,7 +15,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   if (isSSR) return null;
 
-  
   return (
     <GoogleOAuthProvider clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}>
       <div className='xl:w-[1200px] m-auto overflow-hidden h-[100vh]'>
